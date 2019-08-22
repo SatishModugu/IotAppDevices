@@ -1,13 +1,9 @@
-package com.satish.iot.api.devices.shared;
+package com.satish.iot.api.devices.ui.model;
 
-import java.io.Serializable;
-
-public class DeviceDto implements Serializable {
-	private static final long serialVersionUID = -4458395456086404171L;
+public class CreateDeviceResponseModel {
 	private String deviceName;
 	private String deviceType;
 	private String deviceLocation;
-	private String deviceID;
 
 	public String getDeviceName() {
 		return deviceName;
@@ -31,13 +27,5 @@ public class DeviceDto implements Serializable {
 
 	public void setDeviceLocation(String deviceLocation) {
 		this.deviceLocation = deviceLocation;
-	}
-
-	public String getDeviceID() {
-		return deviceID;
-	}
-
-	public void setDeviceID(String deviceID) {
-		this.deviceID = deviceID;
 	}
 }
