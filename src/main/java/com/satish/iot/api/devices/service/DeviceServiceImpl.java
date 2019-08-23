@@ -43,4 +43,11 @@ public class DeviceServiceImpl implements DevicesService {
 		return new User(deviceEntity.getDeviceID(), deviceEntity.getEncryptedPassword(), true, true, true, true,new ArrayList<>());
 	}
 
+	@Override
+	public DeviceDto getDeviceDetailsByID(String deviceID) {
+		DeviceEntity deviceEntity = devicesRepository.findByDeviceID(deviceID);
+		if(deviceEntity==null) throw new UsernameNotFoundException(deviceID);
+		return new ModelMapper().map(deviceEntity, DeviceDto.class);
+	}
+
 }
