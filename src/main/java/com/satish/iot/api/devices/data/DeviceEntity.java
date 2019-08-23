@@ -23,6 +23,14 @@ public class DeviceEntity implements Serializable {
 	private String deviceLocation;
 	@Column(nullable=false, length=50, unique=true)
 	private String deviceID;
+	@Column(nullable=false, unique=true)	
+	private String encryptedPassword;
+	public String getEncryptedPassword() {
+		return encryptedPassword;
+	}
+	public void setEncryptedPassword(String encryptedPassword) {
+		this.encryptedPassword = encryptedPassword;
+	}
 	public long getId() {
 		return id;
 	}

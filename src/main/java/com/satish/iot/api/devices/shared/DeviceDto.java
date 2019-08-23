@@ -8,9 +8,27 @@ public class DeviceDto implements Serializable {
 	private String deviceType;
 	private String deviceLocation;
 	private String deviceID;
+	private String password;
+	private String encryptedPassword;
 
 	public String getDeviceName() {
 		return deviceName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEncryptedPassword() {
+		return encryptedPassword;
+	}
+
+	public void setEncryptedPassword(String encryptedPassword) {
+		this.encryptedPassword = encryptedPassword;
 	}
 
 	public void setDeviceName(String deviceName) {

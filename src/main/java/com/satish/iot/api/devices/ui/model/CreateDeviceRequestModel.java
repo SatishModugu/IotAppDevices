@@ -10,6 +10,23 @@ public class CreateDeviceRequestModel {
 	@Size(min=4,max=16,message="ID should be greater than 4 and less than 16")
 	private String deviceType;
 	private String deviceLocation;
+	private String password;
+
+	public String getDeviceType() {
+		return deviceType;
+	}
+
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getDeviceName() {
 		return deviceName;
