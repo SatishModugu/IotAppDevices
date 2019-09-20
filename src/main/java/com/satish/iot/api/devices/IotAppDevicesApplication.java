@@ -1,3 +1,4 @@
+
 package com.satish.iot.api.devices;
 
 import org.springframework.boot.SpringApplication;
